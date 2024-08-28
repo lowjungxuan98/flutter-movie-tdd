@@ -44,10 +44,7 @@ class MockGetMovieDetail extends _i1.Mock implements _i4.GetMovieDetail {
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
   _i5.Future<_i3.Either<_i6.Failure, _i7.MovieDetail>> execute(int? id) =>
-      (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, _i7.MovieDetail>>.value(
-              _FakeEither_1<_i6.Failure, _i7.MovieDetail>())) as _i5
-          .Future<_i3.Either<_i6.Failure, _i7.MovieDetail>>);
+      (super.noSuchMethod(Invocation.method(#execute, [id]), returnValue: Future<_i3.Either<_i6.Failure, _i7.MovieDetail>>.value(_FakeEither_1<_i6.Failure, _i7.MovieDetail>())) as _i5.Future<_i3.Either<_i6.Failure, _i7.MovieDetail>>);
 }
 
 /// A class which mocks [GetMovieRecommendations].
@@ -65,10 +62,7 @@ class MockGetMovieRecommendations extends _i1.Mock
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
   _i5.Future<_i3.Either<_i6.Failure, List<_i9.Movie>>> execute(dynamic id) =>
-      (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i9.Movie>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i9.Movie>>())) as _i5
-          .Future<_i3.Either<_i6.Failure, List<_i9.Movie>>>);
+      (super.noSuchMethod(Invocation.method(#execute, [id]), returnValue: Future<_i3.Either<_i6.Failure, List<_i9.Movie>>>.value(_FakeEither_1<_i6.Failure, List<_i9.Movie>>())) as _i5.Future<_i3.Either<_i6.Failure, List<_i9.Movie>>>);
 }
 
 /// A class which mocks [GetMovieWatchlistStatus].

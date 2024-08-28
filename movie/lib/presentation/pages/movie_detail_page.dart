@@ -17,7 +17,8 @@ class MovieDetailPage extends StatefulWidget {
   static const routeName = '/movie-detail';
 
   final int id;
-  const MovieDetailPage({Key? key, required this.id}) : super(key: key);
+
+  const MovieDetailPage({super.key, required this.id});
 
   @override
   _MovieDetailPageState createState() => _MovieDetailPageState();
@@ -63,11 +64,11 @@ class MovieDetailContent extends StatelessWidget {
   final List<Movie> recommendations;
   final bool isAddedToWatchlist;
   const MovieDetailContent({
-    Key? key,
+    super.key,
     required this.movie,
     required this.recommendations,
     required this.isAddedToWatchlist,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -218,6 +219,13 @@ class MovieDetailContent extends StatelessWidget {
                         );
                       }
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: isAddedToWatchlist ? Colors.grey[850] : Colors.white,
+                      minimumSize: Size(
+                        MediaQuery.of(context).size.width,
+                        42.0,
+                      ),
+                    ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -236,13 +244,6 @@ class MovieDetailContent extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: isAddedToWatchlist ? Colors.grey[850] : Colors.white,
-                      minimumSize: Size(
-                        MediaQuery.of(context).size.width,
-                        42.0,
-                      ),
                     ),
                   ),
                   const SizedBox(height: 16.0),
@@ -298,7 +299,7 @@ class MovieDetailContent extends StatelessWidget {
   String _showGenres(List<Genre> genres) {
     String result = '';
     for (var genre in genres) {
-      result += genre.name + ', ';
+      result += '${genre.name}, ';
     }
 
     if (result.isEmpty) {
@@ -353,6 +354,8 @@ class MovieDetailContent extends StatelessWidget {
                       child: CachedNetworkImage(
                         imageUrl: Urls.imageUrl(recommendation.posterPath!),
                         placeholder: (context, url) => Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -361,8 +364,6 @@ class MovieDetailContent extends StatelessWidget {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error),

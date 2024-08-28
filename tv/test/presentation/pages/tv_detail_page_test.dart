@@ -23,7 +23,7 @@ void main() {
     mockTvSeasonEpisodesNotifier = MockTvSeasonEpisodesNotifier();
   });
 
-  Widget _makeTestableWidget(Widget body) {
+  Widget makeTestableWidget(Widget body) {
     return ChangeNotifierProvider<TvDetailNotifier>.value(
       value: mockNotifier,
       child: ChangeNotifierProvider<TvSeasonEpisodesNotifier>.value(
@@ -53,7 +53,7 @@ void main() {
       final watchlistButtonIcon = find.byIcon(Icons.add);
 
       await tester.pumpWidget(
-        _makeTestableWidget(const TvDetailPage(id: 1)),
+        makeTestableWidget(const TvDetailPage(id: 1)),
         duration: const Duration(milliseconds: 500),
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
@@ -81,7 +81,7 @@ void main() {
       final watchlistButtonIcon = find.byIcon(Icons.check);
 
       await tester.pumpWidget(
-        _makeTestableWidget(const TvDetailPage(id: 1)),
+        makeTestableWidget(const TvDetailPage(id: 1)),
         duration: const Duration(milliseconds: 500),
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
@@ -110,7 +110,7 @@ void main() {
       final watchlistButton = find.byType(ElevatedButton);
 
       await tester.pumpWidget(
-        _makeTestableWidget(const TvDetailPage(id: 1)),
+        makeTestableWidget(const TvDetailPage(id: 1)),
         duration: const Duration(milliseconds: 500),
       );
 
@@ -147,7 +147,7 @@ void main() {
       final watchlistButton = find.byType(ElevatedButton);
 
       await tester.pumpWidget(
-        _makeTestableWidget(const TvDetailPage(id: 1)),
+        makeTestableWidget(const TvDetailPage(id: 1)),
         duration: const Duration(milliseconds: 500),
       );
 

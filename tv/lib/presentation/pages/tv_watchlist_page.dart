@@ -6,7 +6,7 @@ import '../provider/watchlist_tv_provider.dart';
 import '../widgets/item_card_list.dart';
 
 class TvWatchlist extends StatelessWidget {
-  const TvWatchlist({Key? key}) : super(key: key);
+  const TvWatchlist({super.key});
 
   @override
   Widget build(BuildContext context) {

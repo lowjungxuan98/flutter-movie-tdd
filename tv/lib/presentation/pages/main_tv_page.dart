@@ -9,7 +9,6 @@ import 'package:shimmer/shimmer.dart';
 
 import '../provider/tv_images_notifier.dart';
 import '../provider/tv_list_notifier.dart';
-
 import '../widgets/horizontal_item_list.dart';
 import '../widgets/minimal_detail.dart';
 import '../widgets/sub_heading.dart';
@@ -17,7 +16,7 @@ import 'popular_tvs_page.dart';
 import 'top_rated_tvs_page.dart';
 
 class MainTvPage extends StatefulWidget {
-  const MainTvPage({Key? key}) : super(key: key);
+  const MainTvPage({super.key});
 
   @override
   _MainTvPageState createState() => _MainTvPageState();
@@ -200,13 +199,13 @@ class _MainTvPageState extends State<MainTvPage> {
                   },
                   blendMode: BlendMode.dstIn,
                   child: Shimmer.fromColors(
+                    baseColor: Colors.grey[850]!,
+                    highlightColor: Colors.grey[800]!,
                     child: Container(
                       height: 575.0,
                       width: MediaQuery.of(context).size.width,
                       color: Colors.black,
                     ),
-                    baseColor: Colors.grey[850]!,
-                    highlightColor: Colors.grey[800]!,
                   ),
                 );
               }
@@ -241,6 +240,8 @@ class _MainTvPageState extends State<MainTvPage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -249,8 +250,6 @@ class _MainTvPageState extends State<MainTvPage> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                       );
                     },
@@ -288,6 +287,8 @@ class _MainTvPageState extends State<MainTvPage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -296,8 +297,6 @@ class _MainTvPageState extends State<MainTvPage> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                       );
                     },

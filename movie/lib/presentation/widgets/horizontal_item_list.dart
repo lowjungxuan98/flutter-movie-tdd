@@ -10,9 +10,9 @@ class HorizontalItemList extends StatelessWidget {
   final List<Movie>? movies;
 
   const HorizontalItemList({
-    Key? key,
+    super.key,
     required this.movies,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +51,8 @@ class HorizontalItemList extends StatelessWidget {
                   fit: BoxFit.cover,
                   imageUrl: Urls.imageUrl(movie.posterPath!),
                   placeholder: (context, url) => Shimmer.fromColors(
+                    baseColor: Colors.grey[850]!,
+                    highlightColor: Colors.grey[800]!,
                     child: Container(
                       height: 170.0,
                       width: 120.0,
@@ -59,8 +61,6 @@ class HorizontalItemList extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    baseColor: Colors.grey[850]!,
-                    highlightColor: Colors.grey[800]!,
                   ),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),

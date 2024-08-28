@@ -39,8 +39,5 @@ class MockGetMovieImages extends _i1.Mock implements _i4.GetMovieImages {
           returnValue: _FakeMovieRepository_0()) as _i2.MovieRepository);
   @override
   _i5.Future<_i3.Either<_i6.Failure, _i7.MediaImage>> execute(int? id) =>
-      (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, _i7.MediaImage>>.value(
-              _FakeEither_1<_i6.Failure, _i7.MediaImage>())) as _i5
-          .Future<_i3.Either<_i6.Failure, _i7.MediaImage>>);
+      (super.noSuchMethod(Invocation.method(#execute, [id]), returnValue: Future<_i3.Either<_i6.Failure, _i7.MediaImage>>.value(_FakeEither_1<_i6.Failure, _i7.MediaImage>())) as _i5.Future<_i3.Either<_i6.Failure, _i7.MediaImage>>);
 }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/domain/entities/movie.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:tv/domain/entities/tv.dart';
+
 import '../../domain/usecases/search_movies.dart';
 import '../../domain/usecases/search_tvs.dart';
 

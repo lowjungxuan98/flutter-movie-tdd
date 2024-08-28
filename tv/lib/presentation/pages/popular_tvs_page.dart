@@ -9,7 +9,7 @@ import '../widgets/item_card_list.dart';
 class PopularTvsPage extends StatefulWidget {
   static const routeName = '/popular-tvs';
 
-  const PopularTvsPage({Key? key}) : super(key: key);
+  const PopularTvsPage({super.key});
 
   @override
   _PopularTvsPageState createState() => _PopularTvsPageState();

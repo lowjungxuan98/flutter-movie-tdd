@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:movie/movie.dart';
 import 'package:provider/provider.dart';
 import 'package:tv/tv.dart';
+
 import '../../core.dart';
 
 class WatchlistPage extends StatefulWidget {
   static const routeName = '/watchlist';
 
-  const WatchlistPage({Key? key}) : super(key: key);
+  const WatchlistPage({super.key});
 
   @override
   _WatchlistPageState createState() => _WatchlistPageState();

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tv/presentation/widgets/item_card_list.dart';
+
 import '../bloc/search_bloc.dart';
 
 class TvSearchPage extends StatelessWidget {
   static const routeName = '/tv-search';
 
-  const TvSearchPage({Key? key}) : super(key: key);
+  const TvSearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {

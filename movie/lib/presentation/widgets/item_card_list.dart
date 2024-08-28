@@ -10,9 +10,9 @@ class ItemCard extends StatelessWidget {
   final Movie movie;
 
   const ItemCard({
-    Key? key,
+    super.key,
     required this.movie,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

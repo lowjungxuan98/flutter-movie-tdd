@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 class WatchlistRobot {
   final WidgetTester tester;
+
   WatchlistRobot(this.tester);
 
   Future<void> clickMovieWatchlistTab() async {

@@ -6,13 +6,12 @@ import 'package:tv/presentation/pages/main_tv_page.dart';
 import '../../core.dart';
 import '../../utils/routes.dart';
 import '../provider/home_notifier.dart';
-
 import 'watchlist_page.dart';
 
 class HomePage extends StatefulWidget {
   static const routeName = '/home';
 
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -95,8 +94,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         key: const Key('closeDrawerButton'),
                         onTap: toggle,
                         child: const CircleAvatar(
-                          child: Icon(Icons.close, color: kRichBlack),
                           backgroundColor: Colors.white,
+                          child: Icon(Icons.close, color: kRichBlack),
                         ),
                       ),
                       const SizedBox(height: 128.0),

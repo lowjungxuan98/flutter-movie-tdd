@@ -65,7 +65,7 @@ void main() {
 
   final tTvs = <Tv>[tTv];
 
-  void _arrangeUsecase() {
+  void arrangeUsecase() {
     when(mockGetTvDetail.execute(tId))
         .thenAnswer((_) async => const Right(testTvDetail));
     when(mockGetTvRecommendations.execute(tId))
@@ -77,7 +77,7 @@ void main() {
       'should get tv detail data from the usecase',
       () async {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         await provider.fetchTvDetail(tId);
@@ -91,7 +91,7 @@ void main() {
       'should change state to loading when usecase is called',
       () {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         provider.fetchTvDetail(tId);
@@ -106,7 +106,7 @@ void main() {
       'should change tv data is gotten successfully',
       () async {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         await provider.fetchTvDetail(tId);
@@ -122,7 +122,7 @@ void main() {
       'should change recommendation tvs when data is gotten successfully',
       () async {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         await provider.fetchTvDetail(tId);
@@ -158,7 +158,7 @@ void main() {
       'should get tv recommendations data from the usecase',
       () async {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         await provider.fetchTvDetail(tId);
@@ -173,7 +173,7 @@ void main() {
       'should change recommendations state when data is gotten successfully',
       () async {
         // arrange
-        _arrangeUsecase();
+        arrangeUsecase();
 
         // act
         await provider.fetchTvDetail(tId);

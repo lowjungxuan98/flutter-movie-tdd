@@ -22,8 +22,7 @@ import 'package:movie/presentation/provider/popular_movies_notifier.dart'
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-class _FakeGetPopularMovies_0 extends _i1.Fake implements _i2.GetPopularMovies {
-}
+class _FakeGetPopularMovies_0 extends _i1.Fake implements _i2.GetPopularMovies {}
 
 /// A class which mocks [PopularMoviesNotifier].
 ///

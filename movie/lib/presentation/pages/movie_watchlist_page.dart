@@ -1,11 +1,12 @@
 import 'package:core/utils/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../provider/watchlist_movie_notifier.dart';
 import '../widgets/item_card_list.dart';
 
 class MovieWatchlist extends StatelessWidget {
-  const MovieWatchlist({Key? key}) : super(key: key);
+  const MovieWatchlist({super.key});
 
   @override
   Widget build(BuildContext context) {

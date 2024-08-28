@@ -37,15 +37,13 @@ import 'package:tv/domain/repositories/tv_repository.dart' as _i6;
 
 class _FakeEither_0<L, R> extends _i1.Fake implements _i2.Either<L, R> {}
 
-class _FakeTvDetailResponse_1 extends _i1.Fake implements _i3.TvDetailResponse {
-}
+class _FakeTvDetailResponse_1 extends _i1.Fake implements _i3.TvDetailResponse {}
 
 class _FakeMediaImageModel_2 extends _i1.Fake implements _i4.MediaImageModel {}
 
 class _FakeResponse_3 extends _i1.Fake implements _i5.Response {}
 
-class _FakeStreamedResponse_4 extends _i1.Fake implements _i5.StreamedResponse {
-}
+class _FakeStreamedResponse_4 extends _i1.Fake implements _i5.StreamedResponse {}
 
 /// A class which mocks [TvRepository].
 ///
@@ -88,12 +86,7 @@ class MockTvRepository extends _i1.Mock implements _i6.TvRepository {
           as _i7.Future<_i2.Either<_i8.Failure, List<_i9.Tv>>>);
   @override
   _i7.Future<_i2.Either<_i8.Failure, List<_i11.TvSeasonEpisode>>>
-      getTvSeasonEpisodes(int? id, int? seasonNumber) => (super.noSuchMethod(
-          Invocation.method(#getTvSeasonEpisodes, [id, seasonNumber]),
-          returnValue: Future<
-                  _i2.Either<_i8.Failure, List<_i11.TvSeasonEpisode>>>.value(
-              _FakeEither_0<_i8.Failure, List<_i11.TvSeasonEpisode>>())) as _i7
-          .Future<_i2.Either<_i8.Failure, List<_i11.TvSeasonEpisode>>>);
+      getTvSeasonEpisodes(int? id, int? seasonNumber) => (super.noSuchMethod(Invocation.method(#getTvSeasonEpisodes, [id, seasonNumber]), returnValue: Future<_i2.Either<_i8.Failure, List<_i11.TvSeasonEpisode>>>.value(_FakeEither_0<_i8.Failure, List<_i11.TvSeasonEpisode>>())) as _i7.Future<_i2.Either<_i8.Failure, List<_i11.TvSeasonEpisode>>>);
   @override
   _i7.Future<_i2.Either<_i8.Failure, List<_i9.Tv>>> searchTvs(String? query) =>
       (super.noSuchMethod(Invocation.method(#searchTvs, [query]),
@@ -102,10 +95,7 @@ class MockTvRepository extends _i1.Mock implements _i6.TvRepository {
           as _i7.Future<_i2.Either<_i8.Failure, List<_i9.Tv>>>);
   @override
   _i7.Future<_i2.Either<_i8.Failure, _i12.MediaImage>> getTvImages(int? id) =>
-      (super.noSuchMethod(Invocation.method(#getTvImages, [id]),
-          returnValue: Future<_i2.Either<_i8.Failure, _i12.MediaImage>>.value(
-              _FakeEither_0<_i8.Failure, _i12.MediaImage>())) as _i7
-          .Future<_i2.Either<_i8.Failure, _i12.MediaImage>>);
+      (super.noSuchMethod(Invocation.method(#getTvImages, [id]), returnValue: Future<_i2.Either<_i8.Failure, _i12.MediaImage>>.value(_FakeEither_0<_i8.Failure, _i12.MediaImage>())) as _i7.Future<_i2.Either<_i8.Failure, _i12.MediaImage>>);
   @override
   _i7.Future<_i2.Either<_i8.Failure, String>> saveWatchlist(
           _i10.TvDetail? tv) =>

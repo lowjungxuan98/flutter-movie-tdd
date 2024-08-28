@@ -16,7 +16,7 @@ import 'popular_movies_page.dart';
 import 'top_rated_movies_page.dart';
 
 class MainMoviePage extends StatefulWidget {
-  const MainMoviePage({Key? key}) : super(key: key);
+  const MainMoviePage({super.key});
 
   @override
   _MainMoviePageState createState() => _MainMoviePageState();
@@ -203,13 +203,13 @@ class _MainMoviePageState extends State<MainMoviePage> {
                   },
                   blendMode: BlendMode.dstIn,
                   child: Shimmer.fromColors(
+                    baseColor: Colors.grey[850]!,
+                    highlightColor: Colors.grey[800]!,
                     child: Container(
                       height: 575.0,
                       width: MediaQuery.of(context).size.width,
                       color: Colors.black,
                     ),
-                    baseColor: Colors.grey[850]!,
-                    highlightColor: Colors.grey[800]!,
                   ),
                 );
               }
@@ -244,6 +244,8 @@ class _MainMoviePageState extends State<MainMoviePage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -252,8 +254,6 @@ class _MainMoviePageState extends State<MainMoviePage> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                       );
                     },
@@ -291,6 +291,8 @@ class _MainMoviePageState extends State<MainMoviePage> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -299,8 +301,6 @@ class _MainMoviePageState extends State<MainMoviePage> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                       );
                     },

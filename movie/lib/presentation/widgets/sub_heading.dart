@@ -6,11 +6,11 @@ class SubHeading extends StatelessWidget {
   final String text;
   final Function() onSeeMoreTapped;
   const SubHeading({
-    Key? key,
+    super.key,
     this.valueKey,
     required this.text,
     required this.onSeeMoreTapped,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,10 @@ class SubHeading extends StatelessWidget {
           InkWell(
             key: Key(valueKey!),
             onTap: onSeeMoreTapped,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
-                children: const [
-                  Text('See More'),
+                children: [Text('See More'),
                   Icon(Icons.arrow_forward_ios, size: 16.0)
                 ],
               ),

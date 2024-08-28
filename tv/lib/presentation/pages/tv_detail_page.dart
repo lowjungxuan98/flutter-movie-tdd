@@ -19,7 +19,8 @@ class TvDetailPage extends StatefulWidget {
   static const routeName = '/tv-detail';
 
   final int id;
-  const TvDetailPage({Key? key, required this.id}) : super(key: key);
+
+  const TvDetailPage({super.key, required this.id});
 
   @override
   _TvDetailPageState createState() => _TvDetailPageState();
@@ -69,12 +70,12 @@ class TvDetailContent extends StatefulWidget {
   final List<Tv> recommendations;
   final bool isAddedToWatchlist;
   const TvDetailContent({
-    Key? key,
+    super.key,
     required this.tv,
     required this.seasonNumber,
     required this.recommendations,
     required this.isAddedToWatchlist,
-  }) : super(key: key);
+  });
 
   @override
   State<TvDetailContent> createState() => _TvDetailContentState();
@@ -253,6 +254,13 @@ class _TvDetailContentState extends State<TvDetailContent>
                         );
                       }
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: widget.isAddedToWatchlist ? Colors.grey[850] : Colors.white,
+                      minimumSize: Size(
+                        MediaQuery.of(context).size.width,
+                        42.0,
+                      ),
+                    ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -271,15 +279,6 @@ class _TvDetailContentState extends State<TvDetailContent>
                           ),
                         ),
                       ],
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: widget.isAddedToWatchlist
-                          ? Colors.grey[850]
-                          : Colors.white,
-                      minimumSize: Size(
-                        MediaQuery.of(context).size.width,
-                        42.0,
-                      ),
                     ),
                   ),
                   const SizedBox(height: 16.0),
@@ -420,7 +419,7 @@ class _TvDetailContentState extends State<TvDetailContent>
   String _showGenres(List<Genre> genres) {
     String result = '';
     for (var genre in genres) {
-      result += genre.name + ', ';
+      result += '${genre.name}, ';
     }
 
     if (result.isEmpty) {
@@ -475,6 +474,8 @@ class _TvDetailContentState extends State<TvDetailContent>
                       child: CachedNetworkImage(
                         imageUrl: Urls.imageUrl(recommendation.posterPath!),
                         placeholder: (context, url) => Shimmer.fromColors(
+                          baseColor: Colors.grey[850]!,
+                          highlightColor: Colors.grey[800]!,
                           child: Container(
                             height: 170.0,
                             width: 120.0,
@@ -483,8 +484,6 @@ class _TvDetailContentState extends State<TvDetailContent>
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          baseColor: Colors.grey[850]!,
-                          highlightColor: Colors.grey[800]!,
                         ),
                         errorWidget: (context, url, error) =>
                             const Icon(Icons.error),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/presentation/widgets/item_card_list.dart';
+
 import '../bloc/search_bloc.dart';
 
 class MovieSearchPage extends StatelessWidget {
   static const routeName = '/movie-search';
 
-  const MovieSearchPage({Key? key}) : super(key: key);
+  const MovieSearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -11,11 +11,11 @@ class MinimalDetail extends StatelessWidget {
   final Tv tv;
 
   const MinimalDetail({
-    Key? key,
+    super.key,
     this.keyValue,
     this.closeKeyValue,
     required this.tv,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -71,11 +71,6 @@ class MinimalDetail extends StatelessWidget {
                                 child: TextButton(
                                   key: Key(closeKeyValue ?? '-'),
                                   onPressed: () => Navigator.pop(context),
-                                  child: const Icon(
-                                    Icons.close,
-                                    color: Colors.white,
-                                    size: 20.0,
-                                  ),
                                   style: TextButton.styleFrom(
                                     backgroundColor:
                                         Colors.white.withOpacity(0.2),
@@ -83,6 +78,11 @@ class MinimalDetail extends StatelessWidget {
                                       borderRadius:
                                           BorderRadius.circular(1000.0),
                                     ),
+                                  ),
+                                  child: const Icon(
+                                    Icons.close,
+                                    color: Colors.white,
+                                    size: 20.0,
                                   ),
                                 ),
                               ),
@@ -146,24 +146,25 @@ class MinimalDetail extends StatelessWidget {
                   arguments: tv.id,
                 );
               },
-              child: Row(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 16.0,
+                ),
+              ),
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: const [
+                    children: [
                       Icon(Icons.info_outline, size: 16.0),
                       SizedBox(width: 8.0),
                       Text('Detail & More'),
                     ],
                   ),
-                  const Icon(Icons.arrow_forward_ios_rounded, size: 16.0),
+                  Icon(Icons.arrow_forward_ios_rounded, size: 16.0),
                 ],
-              ),
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(
-                  horizontal: 16.0,
-                  vertical: 16.0,
-                ),
               ),
             ),
           ),
