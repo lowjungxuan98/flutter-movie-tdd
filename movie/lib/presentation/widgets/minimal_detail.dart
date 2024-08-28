@@ -20,7 +20,7 @@ class MinimalDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300.0,
+      height: 310.0,
       child: Column(
         children: [
           Padding(
@@ -158,8 +158,7 @@ class MinimalDetail extends StatelessWidget {
                 ],
               ),
               style: TextButton.styleFrom(
-                primary: Colors.white,
-                padding: const EdgeInsets.symmetric(
+                foregroundColor: Colors.white, padding: const EdgeInsets.symmetric(
                   horizontal: 16.0,
                   vertical: 16.0,
                 ),
