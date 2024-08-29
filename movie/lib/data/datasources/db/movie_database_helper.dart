@@ -10,8 +10,7 @@ class MovieDatabaseHelper {
     _databaseHelper = this;
   }
 
-  factory MovieDatabaseHelper() =>
-      _databaseHelper ?? MovieDatabaseHelper._instance();
+  factory MovieDatabaseHelper() => _databaseHelper ?? MovieDatabaseHelper._instance();
 
   static Database? _database;
 
@@ -74,9 +73,7 @@ class MovieDatabaseHelper {
 
   Future<List<Map<String, dynamic>>> getWatchlistMovies() async {
     final db = await database;
-    final List<Map<String, dynamic>> results =
-        await db!.query(_movieWatchlistTable);
-
+    final List<Map<String, dynamic>> results = await db!.query(_movieWatchlistTable);
     return results;
   }
 }
